@@ -10,7 +10,7 @@ class SwaggerUIOfflinePackager {
     }
 
     async pack(inputFilename, outputFilename) {
-        const swaggerTemplate = './swagger.template.html';
+        const swaggerTemplate = __dirname + '/swagger.template.html';
 
         let spec;
         let file = fs.readFileSync(path.resolve(inputFilename), 'utf8');
