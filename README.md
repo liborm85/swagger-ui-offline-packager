@@ -1,4 +1,4 @@
-# Swagger UI Offline Packager
+# Swagger UI Offline Packager [![npmjs](https://img.shields.io/npm/v/swagger-ui-offline-packager.svg)](https://www.npmjs.com/package/swagger-ui-offline-packager)
 
 A tool that generates a single, self-contained HTML file from an OpenAPI definition (YAML or JSON), rendering it in Swagger UI. This allows you to view API documentation offline, without needing an internet connection or a separate web server.
 
