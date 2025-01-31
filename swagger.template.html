@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{swagger-title} - {swagger-version} - {swagger-author} - Swagger" />
+    <meta name="author" content="{swagger-author}" />
+    <title>{swagger-title} - {swagger-version} - {swagger-author} - Swagger</title>
+    <link inline rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5/swagger-ui.css" />
+</head>
+
+<body>
+    <div id="swagger-ui"></div>
+    <script inline src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js" crossorigin></script>
+    <script>
+        var spec = '{swagger-spec}';
+
+        window.onload = () => {
+            // OpenAPI 3.1.0 introduces server selection for each operation, allowing you to CHANGE the server for it.
+            // However, Swagger UI interprets this not as a CHANGE, but rather that for each operation, the server
+            // needs to be selected again (it does not consider the selection in the globally defined servers).
+            // This wrapper plugin will disable server selection for individual operations.
+            const DisableOperationServersComponentPlugin = function (system) {
+                return {
+                    wrapComponents: {
+                        OperationServers: (Original, system) => (props) => {
+                            return null;
+                        }
+                    }
+                }
+            };
+
+            window.ui = SwaggerUIBundle({
+                spec: spec,
+                dom_id: '#swagger-ui',
+                deepLinking: true,
+                plugins: [
+                    SwaggerUIBundle.plugins.DownloadUrl,
+                    DisableOperationServersComponentPlugin
+                ]
+            });
+        };
+    </script>
+</body>
+
+</html>

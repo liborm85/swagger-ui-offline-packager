@@ -1,0 +1,29 @@
+{
+  "name": "swagger-ui-offline-packager",
+  "version": "0.0.0",
+  "description": "Swagger UI Offline Packager",
+  "main": "index.js",
+  "bin": {
+    "swagger-ui-offline-packager": "./bin/cli.js",
+    "sop": "./bin/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:liborm85/swagger-ui-offline-packager.git"
+  },
+  "author": {
+    "name": "Libor M.",
+    "email": "liborm85@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liborm85/swagger-ui-offline-packager/issues"
+  },
+  "homepage": "https://github.com/liborm85/swagger-ui-offline-packager",
+  "dependencies": {
+    "commander": "^13.1.0",
+    "html-minifier-terser": "^7.2.0",
+    "inline-source": "^8.0.3",
+    "yaml": "^2.7.0"
+  }
+}
