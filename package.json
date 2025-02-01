@@ -20,6 +20,12 @@
     "url": "https://github.com/liborm85/swagger-ui-offline-packager/issues"
   },
   "homepage": "https://github.com/liborm85/swagger-ui-offline-packager",
+  "keywords": [
+    "swagger",
+    "openapi",
+    "swagger-ui",
+    "swagger-js"
+  ],
   "dependencies": {
     "commander": "^13.1.0",
     "html-minifier-terser": "^7.2.0",
