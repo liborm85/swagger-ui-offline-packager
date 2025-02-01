@@ -23,6 +23,8 @@
   "keywords": [
     "swagger",
     "openapi",
+    "rest",
+    "rest-api",
     "swagger-ui",
     "swagger-js"
   ],
