@@ -1,9 +1,9 @@
 
 const fs = require('node:fs');
 const path = require('node:path');
-const yaml = require('yaml');
 const { inlineSource } = require('inline-source');
 const { minify } = require('html-minifier-terser');
+const { parseSchema } = require('./schemaParser');
 
 class SwaggerUIOfflinePackager {
     constructor() {
@@ -12,20 +12,7 @@ class SwaggerUIOfflinePackager {
     async pack(inputFilename, outputFilename) {
         const swaggerTemplate = __dirname + '/swagger.template.html';
 
-        let spec;
-        let file = fs.readFileSync(path.resolve(inputFilename), 'utf8');
-
-        let extension = path.extname(inputFilename).toLowerCase();
-        if ((extension === '.yaml') || (extension === '.yml')) {
-            console.log('Converting YAML...');
-
-            spec = yaml.parse(file);
-
-            console.log('YAML converted.');
-            console.log('');
-        } else if (extension === '.json') {
-            spec = JSON.parse(file);
-        }
+        let spec = await parseSchema(inputFilename);
 
         console.log('Building standalone HTML...');
 
@@ -60,10 +47,8 @@ class SwaggerUIOfflinePackager {
 
                 fs.writeFileSync(path.resolve(outputFilename), html);
 
-                console.log('Standalone HTML builded.');
-
                 console.log('');
-                console.log('Standalone HTML file ' + outputFilename + ' created successfully.');
+                console.log('Standalone HTML file ' + outputFilename + ' has been created successfully.');
             }).catch((err) => {
                 console.error('Error: ' + err.message);
                 return process.exit(1);
