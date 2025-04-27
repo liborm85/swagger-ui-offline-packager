@@ -5,6 +5,8 @@ A tool that generates a single, self-contained HTML file from an OpenAPI definit
 ## Features
 - Converts OpenAPI (YAML or JSON) into a standalone Swagger UI HTML file
 - The generated file works completely offline
+- Supports loading the API definition from multiple files
+- Supports `$ref` references in OpenAPI 3.1 specifications
 - Easy to use, no external dependencies required
 
 Perfect for sharing API documentation in a simple, portable format! 🚀

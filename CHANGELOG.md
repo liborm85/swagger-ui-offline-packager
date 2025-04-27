@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.1.0 - 2025-04-27
 
 - added $ref dereferencing to support bundle multiple schema files into a single definition
 - added $ref dereferencing to support OpenAPI 3.1
