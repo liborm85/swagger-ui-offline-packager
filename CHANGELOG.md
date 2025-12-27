@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- update dependencies
+
 ## 1.1.0 - 2025-04-27
 
 - added $ref dereferencing to support bundle multiple schema files into a single definition

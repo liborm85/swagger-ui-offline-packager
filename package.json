@@ -29,12 +29,12 @@
     "swagger-js"
   ],
   "dependencies": {
-    "@apidevtools/json-schema-ref-parser": "^12.0.1",
-    "commander": "^13.1.0",
+    "@apidevtools/json-schema-ref-parser": "^15.1.3",
+    "commander": "^14.0.2",
     "html-minifier-terser": "^7.2.0",
     "inline-source": "^8.0.3",
     "jsonpath-plus": "^10.3.0",
-    "semver": "^7.7.1",
-    "yaml": "^2.7.1"
+    "semver": "^7.7.3",
+    "yaml": "^2.8.2"
   }
 }
