@@ -1,6 +1,6 @@
 {
   "name": "swagger-ui-offline-packager",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Swagger UI Offline Packager",
   "main": "index.js",
   "bin": {
